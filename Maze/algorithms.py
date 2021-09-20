@@ -12,7 +12,7 @@ from collections import deque
 
 
 CELLSIZE = 20
-X_CELLS = 24   # number of horizontal cells
+X_CELLS = 28   # number of horizontal cells
 Y_CELLS = 18   # number of vertical cells
 
 FPS = 35    # speed of visualization
@@ -197,11 +197,11 @@ def mainloop(algorithm):
 
         if last_frame:
             show_message('Searching way out...', True)
-            pygame.image.save(screen, './capture/maze_final.tga')
+            pygame.image.save(screen, './capture/maze_final.png')
             pygame.time.delay(PAUSETIME_MIDDLE)
             run_astar(last_frame)
             show_message('SOLVED !!!', True)
-            pygame.image.save(screen, './capture/path_final.tga')
+            pygame.image.save(screen, './capture/path_final.png')
 
         pygame.time.delay(PAUSETIME_END)
         pygame.quit()
@@ -287,7 +287,7 @@ def run_DFS():
         show_coloring_message('CREATING MAZE...', max_frames, cur_f)
 
         pygame.display.update()
-        pygame.image.save(screen, './capture/maze_%04d.tga' % (cur_f + 1))
+        pygame.image.save(screen, './capture/maze_%04d.png' % (cur_f + 1))
         clock.tick(FPS)
 
         cur_f +=1
@@ -358,7 +358,7 @@ def run_prim():
         show_coloring_message('CREATING MAZE...', max_frames, cur_f)
 
         pygame.display.update()
-        pygame.image.save(screen, './capture/maze_%04d.tga' % (cur_f + 1))
+        pygame.image.save(screen, './capture/maze_%04d.png' % (cur_f + 1))
         clock.tick(FPS)
 
         cur_f += 1
@@ -461,7 +461,7 @@ def run_astar(frame):
             GREEN += abs(GREEN - GREEN_max) /coloring_factor
 
         pygame.display.update()
-        pygame.image.save(screen, './capture/path_%04d.tga' % (cur_f + 1))
+        pygame.image.save(screen, './capture/path_%04d.png' % (cur_f + 1))
         clock.tick(FPS//2)
 
         cur_f += 1  # update frame

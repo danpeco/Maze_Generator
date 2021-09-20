@@ -11,7 +11,7 @@ if __name__ == '__main__':
     # 0 - View settings
     # 1 - Depth-first search
     # 2 - Prim
-    algorithm = 1
+    algorithm = 2
 
     # clean up previous output
     if os.path.isdir(CAPDIR):
