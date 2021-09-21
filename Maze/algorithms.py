@@ -13,7 +13,7 @@ from collections import deque
 
 CELLSIZE = 20
 X_CELLS = 28   # number of horizontal cells
-Y_CELLS = 18   # number of vertical cells
+Y_CELLS = 16   # number of vertical cells
 
 FPS = 35    # speed of visualization
 
@@ -31,17 +31,16 @@ Y_GRID = (range(MARGIN_Y, MAZEHEIGHT + MARGIN_Y, CELLSIZE))
 
 SIZESQ = 0.62 * CELLSIZE    # size of each segment to be render
 OFFSET = 0.5 * SIZESQ      # offset from the center
-PAUSETIME_END = int(10e3)
+PAUSETIME_END = int(10e2)
 PAUSETIME_MIDDLE = int(10e2)
 
 # color palette
 BG_SCREEN = (0, 0, 0)
-BG_MAZE = (17, 0, 15)
+BG_MAZE = (34, 0, 30)
 CORRIDOR_Color = (206, 0, 178)
 HEAD_color = (0, 250, 246)
 TEXT_color = (0, 250, 246)
 TEXT_BOX_color = (20, 20, 20)
-PATH_color = (255, 138, 0)
 
 # running options
 CAPDIR = './capture/'
@@ -452,6 +451,7 @@ def run_astar(frame):
         sys.stdout.flush()
 
         screen.fill(BG_SCREEN)
+        pygame.draw.rect(screen, BG_MAZE, (MARGIN_X, MARGIN_Y, MAZEWIDTH, MAZEHEIGHT))
         show_message('SOLVING...', False)
         draw_maze_nodes(frame)
 
