@@ -4,10 +4,10 @@ I wrote a maze generator that works with two commonly known algorithms: Depth Fi
 
 
 Depth-First Search:
-![alt-text](https://github.com/danpeco/Maze_Generator/blob/master/demo/maze_dfs_26x18.gif)
+![alt-text](https://github.com/danpeco/Maze_Generator/blob/master/demo/maze_dfp_560x320.gif)
 
 Randomized Prim:
-![alt-text](https://github.com/danpeco/Maze_Generator/blob/master/demo/maze_prim_26x18.gif)
+![alt-text](https://github.com/danpeco/Maze_Generator/blob/master/demo/maze_prim_560x320.gif)
 
 
 
